@@ -15,6 +15,9 @@
     <script src="https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/example/bundle.js"></script>
     <script>              
         var map = L.map('map').setView([33.841778, -84.386709], 14);
+	   
+	//Geolocation
+	L.control.locate().addTo(map);
 
         // Add an OpenStreetMap tile layer
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
