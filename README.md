@@ -1,7 +1,6 @@
 # Atlanta
-https://mappingwikipedia.github.io/Atlanta/
 
-English language Wikipedia articles centered on Atlanta.
+English language Wikipedia articles mapped and centered on Atlanta: https://mappingwikipedia.github.io/Atlanta/
 
 Basemap is OpenStreetMap
 
