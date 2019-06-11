@@ -24,9 +24,10 @@
 	// Geolocation -  L.control.locate().addTo(map);
 
         // Add an OpenStreetMap tile layer
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { minZoom: 12, maxZoom: 18 } {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
+	    
 
         // Add a Wikipedia layer
         L.layerGroup.wikipediaLayer({ target: '_blank', images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' }).addTo(map);
