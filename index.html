@@ -29,13 +29,18 @@
 
        
 	//L.tileLayer('https://api.mapbox.com/styles/v1/sheffieldhale/cjw9z7ofb0l4f1dqb3ghrst3a.html?fresh=true&title=true&access_token=pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ#8').addTo(map);
-	   var layer = new L.StamenTileLayer("terrain");
-		var map = new L.Map("element_id", {
-    		center: new L.LatLng(37.7, -122.4),
-    		zoom: 12
-		});
-		map.addLayer(layer);	   
+	
+	  //   var layer = new L.StamenTileLayer("terrain");
+	//	var map = new L.Map("element_id", {
+    	//	center: new L.LatLng(37.7, -122.4),
+    	//	zoom: 12
+	//	});
+	//	map.addLayer(layer);	   
 	    
+	    L.tileLayer('http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+	   
 
         // Add a Wikipedia layer
         L.layerGroup.wikipediaLayer({ target: '_blank', images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' }).addTo(map);
