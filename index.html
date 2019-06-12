@@ -34,13 +34,22 @@
        
 	//L.tileLayer('https://api.mapbox.com/styles/v1/sheffieldhale/cjw9z7ofb0l4f1dqb3ghrst3a.html?fresh=true&title=true&access_token=pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ#8').addTo(map);
 	
-	 L.layerGroup(<watercolor>, <terrain>)
-	   
-        watercolor = L.tileLayer('http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
+	//L.control.layers(<Object> baselayers?, <Object> overlays?, <Control.Layers options> options?)	   
+	var baseLayers = {
+	    "terrain": terrain,
+	    "watercolor": watercolor
+	};
+	var overlays = {
+	    "Marker": marker,
+	    "Roads": roadsLayer
+	};
+	L.control.layers(baseLayers, overlays).addTo(map);
+	    
+	var watercolor = L.tileLayer('http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 	    
-	    terrain = L.tileLayer('http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg', {
+	   var terrain = L.tileLayer('http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 	   
