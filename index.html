@@ -30,10 +30,10 @@
 	map.setView([37.785167, -122.464277], 14);
 	   
 
-       
-	//L.tileLayer('https://api.mapbox.com/styles/v1/sheffieldhale/cjw9z7ofb0l4f1dqb3ghrst3a.html?fresh=true&title=true&access_token=pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ#8').addTo(map);
-	
-	//L.control.layers(<Object> baselayers?, <Object> overlays?, <Control.Layers options> options?)	   
+      //Add Mapbox Basemap Layer
+	//var Mapbox = L.tileLayer('https://api.mapbox.com/styles/v1/sheffieldhale/cjw9z7ofb0l4f1dqb3ghrst3a.html?fresh=true&title=true&access_token=pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ#8').addTo(map);
+	 
+	    
 	var watercolor = L.tileLayer('http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         })
@@ -65,6 +65,8 @@
 	};
 	L.control.layers(baseLayers, overlays).addTo(map);
 	    
+	    //Add control layers options?
+	//L.control.layers(<Object> baselayers?, <Object> overlays?, <Control.Layers options> options?)	  
 	
 	</script>
 </body>
