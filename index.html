@@ -10,7 +10,15 @@
     <link href="https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/example/leaflet.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	      <link rel="stylesheet" href="../dist/leaflet.css" />
-<style>
+
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[VERSION]/dist/L.Control.Locate.min.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[VERSION]/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+	
+	
+	<style>
 .leaflet-control-layers-toggle:after{ 
     content:"layers"; 
     color:#000 ;
@@ -66,7 +74,7 @@
        var Wikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' }).addTo(map);
     
 	    // Add a Geolocation feature
-	    //	var Geolocation = L.control.locate()
+	    var Geolocation = L.control.locate().addTo(map);
 
 	    
 	    var baseLayers = {
@@ -76,7 +84,7 @@
 	};
 	var overlays = {
 	    "Wikipedia": Wikipedia,
-		// "Geolocation": Geolocation,
+	"Geolocation": Geolocation,
 	};
 	L.control.layers(baseLayers, overlays).addTo(map);
 	    
