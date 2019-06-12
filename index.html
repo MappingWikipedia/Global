@@ -29,7 +29,6 @@
     })
 	map.setView([37.785167, -122.464277], 14);
 	   
-	// Geolocation -  L.control.locate().addTo(map);
 
        
 	//L.tileLayer('https://api.mapbox.com/styles/v1/sheffieldhale/cjw9z7ofb0l4f1dqb3ghrst3a.html?fresh=true&title=true&access_token=pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ#8').addTo(map);
@@ -51,6 +50,9 @@
         // Add a Wikipedia layer
        var Wikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' }).addTo(map);
     
+	    // Add a Geolocation feature
+	    	var Geolocation = L.control.locate().addTo(map);
+
 	    
 	    var baseLayers = {
 	    "terrain": terrain,
@@ -59,6 +61,7 @@
 	};
 	var overlays = {
 	    "Wikipedia": Wikipedia,
+		"Geolocation": Geolocation,
 	};
 	L.control.layers(baseLayers, overlays).addTo(map);
 	    
