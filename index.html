@@ -28,7 +28,10 @@
 	// Geolocation -  L.control.locate().addTo(map);
 
        
-	L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+	L.tileLayer.provider('MapBox', {
+    id: 'sheffieldhale/cjw9z7ofb0l4f1dqb3ghrst3a',
+    accessToken: 'pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ'
+}).addTo(map);
 	   
 	    
 
