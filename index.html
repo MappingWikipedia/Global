@@ -42,6 +42,10 @@
 	   var terrain = L.tileLayer('http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
+	    
+	    var OpenStreetMap = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 	   
 
         // Add a Wikipedia layer
@@ -50,7 +54,8 @@
 	    
 	    var baseLayers = {
 	    "terrain": terrain,
-	    "watercolor": watercolor
+	    "watercolor": watercolor,
+	    "OpenStreetMap": OpenStreetMap
 	};
 	var overlays = {
 	    "Wikipedia": Wikipedia,
