@@ -4,18 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-    <meta name="description" content="Demo usage for the Leaflet.WikipediaLayer plugin">
-    <meta name="author" content="Matt Barker">
     <title>Wikipedia Map</title>
     
-
-	
 	<link href="https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/example/leaflet.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	      <link rel="stylesheet" href="../dist/leaflet.css" />
-
-	
-	
 	
 	
 	<style>
@@ -49,10 +42,11 @@
 
 	
     <script>              
-        map.fitBounds([
-    [-89, 179],
-    [89, -179]
-]);
+     
+
+	    var corner1 = L.latLng(-89, 179),
+		corner2 = L.latLng(89, -179),
+		bounds = L.latLngBounds(corner1, corner2);
 	    
 	  var map = L.map('map', {
         minZoom: 2,
