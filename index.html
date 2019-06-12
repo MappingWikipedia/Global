@@ -19,7 +19,11 @@
 
 	
     <script>              
-        var map = L.map('map').setView([33.841778, -84.386709], 14);
+        var map = L.map('map', {
+        minZoom: 12,
+        maxZoom: 20
+    })
+	map.setView([33.841778, -84.386709], 14);
 	   
 	// Geolocation -  L.control.locate().addTo(map);
 
