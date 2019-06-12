@@ -49,7 +49,12 @@
 
 	
     <script>              
-        var map = L.map('map', {
+        map.fitBounds([
+    [-180, 180],
+    180, -180]
+]);
+	    
+	  var map = L.map('map', {
         minZoom: 4,
         maxZoom: 20
     })
