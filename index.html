@@ -28,8 +28,8 @@
 	// Geolocation -  L.control.locate().addTo(map);
 
        
-	L.tileLayer('https://api.mapbox.com/styles/v1/sheffieldhale/cjw9z7ofb0l4f1dqb3ghrst3a.html?fresh=true&title=true&access_token=pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ#8').addTo(map);
-	    	   
+	//L.tileLayer('https://api.mapbox.com/styles/v1/sheffieldhale/cjw9z7ofb0l4f1dqb3ghrst3a.html?fresh=true&title=true&access_token=pk.eyJ1Ijoic2hlZmZpZWxkaGFsZSIsImEiOiJvWU4xOFMwIn0.rU9vYzMsruo3JSJPQ92LaQ#8').addTo(map);
+	    var layer = new L.StamenTileLayer("terrain").addTo(map);	   
 	    
 
         // Add a Wikipedia layer
