@@ -63,9 +63,16 @@
 	   
 
         // Add a Wikipedia layer
-       var EnWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://en.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' }).addTo(map);
-       var EsWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://es.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
+	var EnWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://en.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' }).addTo(map);
+	var EsWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://es.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
+	var ZhWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://zh.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
+	var ArWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://ar.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
+  	var HiWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://hi.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
+  	var RuWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://ru.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
+  	var FrWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://fr.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
+  	var DeWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://de.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
 
+	    
 	    // Add a Geolocation feature
 	   // var Geolocation = L.control.locate().addTo(map);
 
@@ -79,7 +86,13 @@
 	var overlays = {
 		"English": EnWikipedia,
 		"Spanish": EsWikipedia,
-		
+		"Chinese": ZhWikipedia,
+		"Arabic": ArWikipedia,
+		"Hindi": HiWikipedia,
+		"Russian": RuWikipedia,
+		"French": FrWikipedia,
+		"German": DeWikipedia,
+
 		
 	//"Geolocation": Geolocation,
 	};
