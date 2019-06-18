@@ -95,9 +95,12 @@
 		"German": DeWikipedia,
 		"Portuguese": PtWikipedia,
 		
-	//"Geolocation": Geolocation,
 	};
+	    
 	L.control.layers(baseLayers, overlays).addTo(map);
+	 
+	//Search Bar    
+	L.control.aistacksymbolsearch({aisLayer: layers.AIS}).addTo(map);
 	    
 	    //Add control layers options?
 	//L.control.layers(<Object> baselayers?, <Object> overlays?, <Control.Layers options> options?)	  
