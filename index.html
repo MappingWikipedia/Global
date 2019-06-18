@@ -63,8 +63,9 @@
 	   
 
         // Add a Wikipedia layer
-       var Wikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://es.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' }).addTo(map);
-    
+       var EnWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://en.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' }).addTo(map);
+           var EsWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://es.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' }).addTo(map);
+
 	    // Add a Geolocation feature
 	   // var Geolocation = L.control.locate().addTo(map);
 
@@ -76,7 +77,8 @@
 		    
 	};
 	var overlays = {
-	    "Wikipedia": Wikipedia,
+	    "English": EnWikipedia,
+		"Spanish": EsWikipedia,
 	//"Geolocation": Geolocation,
 	};
 	L.control.layers(baseLayers, overlays).addTo(map);
