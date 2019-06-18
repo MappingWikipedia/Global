@@ -9,7 +9,8 @@
 	<link href="https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/example/leaflet.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	      <link rel="stylesheet" href="../dist/leaflet.css" />
-	
+//Search box
+	<link href="../dist/searchbox.min.css" rel="stylesheet" />
 	
 	<style>
 	.leaflet-control-layers-toggle{ 
@@ -27,10 +28,39 @@
 	
 	<script src="https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/example/bundle.js"></script>
 	
+		// Search Bar
+		<script src="../dist/leaflet.customsearchbox.min.js"></script>
 
 	
     <script>              
      
+	    var searchboxControl=createSearchboxControl();
+        var control = new searchboxControl({
+            sidebarTitleText: 'Header',
+            sidebarMenuItems: {
+                Items: [
+                    { type: "link", name: "Link 1 (github.com)", href: "http://github.com", icon: "icon-local-carwash" },
+                    { type: "link", name: "Link 2 (google.com)", href: "http://google.com", icon: "icon-cloudy" },
+                    { type: "button", name: "Button 1", onclick: "alert('button 1 clicked !')", icon: "icon-potrait" },
+                    { type: "button", name: "Button 2", onclick: "button2_click();", icon: "icon-local-dining" },
+                    { type: "link", name: "Link 3 (stackoverflow.com)", href: 'http://stackoverflow.com', icon: "icon-bike" },
+                ]
+            }
+        });
+        control._searchfunctionCallBack = function (searchkeywords)
+        {
+            if (!searchkeywords) {
+                searchkeywords = "The search call back is clicked !!"
+            }
+            alert(searchkeywords);
+        }
+        map.addControl(control);
+    });
+    
+    function button2_click()
+    {
+        alert('button 2 clicked !!!');
+    }
 
 	    var corner1 = L.latLng(-90, 183),
 		corner2 = L.latLng(90, -183),
@@ -74,8 +104,6 @@
   	var PtWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://pt.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
 
 	    
-	    // Add a Geolocation feature
-	   // var Geolocation = L.control.locate().addTo(map);
 
 	    
 	    var baseLayers = {
@@ -100,7 +128,6 @@
 	L.control.layers(baseLayers, overlays).addTo(map);
 	 
 	//Search Bar    
-	L.control.aistacksymbolsearch({aisLayer: layers.AIS}).addTo(map);
 	    
 	    //Add control layers options?
 	//L.control.layers(<Object> baselayers?, <Object> overlays?, <Control.Layers options> options?)	  
