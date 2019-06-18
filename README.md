@@ -1,4 +1,4 @@
-Test of English language Wikipedia articles mapped
+Test of Wikipedia articles mapped
 
 Ideas welcome
 
