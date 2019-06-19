@@ -61,8 +61,7 @@
 	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 	   
-
-        // Add a Wikipedia layer
+      // Add a Wikipedia layer
 	var EnWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://en.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' }).addTo(map);
 	var JaWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://ja.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
 	var EsWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://es.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
@@ -72,26 +71,27 @@
   	var DeWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://de.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
   	var PtWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://pt.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
 	var ItWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://it.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
-    
-	    
+    	var PlWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://pl.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
 
 	    
 	    var baseLayers = {
 	    "terrain": terrain,
 	    "watercolor": watercolor,
 	    "OpenStreetMap": OpenStreetMap
-		    
 	};
 	var overlays = {
 		"English": EnWikipedia,
-		"Japanese": JaWikipedia,
-		"Spanish": EsWikipedia,
 		"German": DeWikipedia,
 		"Russian": RuWikipedia,
+		"Japanese": JaWikipedia,
 		"French": FrWikipedia,
+		"Spanish": EsWikipedia,
 		"Italian": ItWikipedia,
 		"Chinese": ZhWikipedia,
+		"Polish": PlWikipedia,
 		"Portuguese": PtWikipedia,
+
+
 		
 	};
 	    
