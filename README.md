@@ -1,4 +1,4 @@
-[https://mappingwikipedia.github.io/Global/](url)
+https://mappingwikipedia.github.io/Global/
 
 Loads 100 articles at a time.
 
