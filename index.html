@@ -75,10 +75,10 @@
     	var NlWikipedia = L.layerGroup.wikipediaLayer({ target: '_blank', url: 'https://nl.wikipedia.org/',  images: 'https://cdn.rawgit.com/MatthewBarker/leaflet-wikipedia/master/build/images' });
 
 	    
-	 //   var baseLayers = {
+	  var baseLayers = {
 	  //  "terrain": terrain,
 	//    "watercolor": watercolor,
-	   // "OpenStreetMap": OpenStreetMap
+	   "OpenStreetMap": OpenStreetMap
 	};
 	var overlays = {
 		"English": EnWikipedia,
@@ -97,7 +97,7 @@
 		
 	};
 	    
-	L.control.layers(overlays).addTo(map);
+	L.control.layers(baselayers, overlay).addTo(map);
 	 
 	//Search Bar    
 	    
